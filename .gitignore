@@ -97,3 +97,13 @@
 
 # Don't track unpacked product files
 /doctoc-snap-*/
+
+/*.snap
+/*_source.tar.bz2
+
+# Don't track unpacked snap filesystems(for patching existing revisions)
+squashfs-root
+
+# Don't track snapcraft remote-build logs
+/buildlog_*.txt
+/snapcraft-*.txt
