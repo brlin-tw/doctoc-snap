@@ -38,8 +38,12 @@ platforms:
   arm64:
   armhf:
   ppc64el:
-  riscv64:
   s390x:
+
+  # DISABLED: Not supported by the npm plugin
+  # https://gitlab.com/brlin/doctoc-snap/-/work_items/1
+  # https://github.com/canonical/craft-parts/blob/4823e60/craft_parts/plugins/npm_plugin.py#L41-L48
+  #riscv64:
 
 apps:
   doctoc:
