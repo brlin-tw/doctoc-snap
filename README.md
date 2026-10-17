@@ -7,6 +7,6 @@ Provide easy access to the DocToc utility on snap-enabled Linux distributions
 
 ## Licensing
 
-Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the 4.0 International version of the Creative Commons Attributions-SharedAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
+Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the MIT license](https://opensource.org/license/mit), or any of its more recent versions of your preference.
 
 This work complies to [the REUSE Specification](https://reuse.software/spec/), refer to the [REUSE - Make licensing easy for everyone](https://reuse.software/) website for info regarding the licensing of this product.
