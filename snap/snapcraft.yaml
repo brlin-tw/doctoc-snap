@@ -56,9 +56,28 @@ parts:
   doctoc:
     plugin: npm
     source: https://github.com/thlorenz/doctoc.git
-    source-tag: v2.5.0
+    build-packages:
+      # selective-checkout dependencies
+      - curl
+      - git
+      - jq
+      - sed
     npm-include-node: true
     npm-node-version: 22.23.2
     override-pull: |
-      craftctl default
-      craftctl set version="$(git describe --tags --always | sed -e 's/^v//')"
+      set -o nounset
+
+      if ! craftctl default; then
+          printf \
+            'Error: Unable to run the default action of this step.\n' \
+            1>&2
+            exit 2
+      fi
+
+      if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/selective-checkout" \
+          --append-packaging-revision; then
+          printf \
+              'Error: Unable to run the selective-checkout scriptlet.\n' \
+              1>&2
+              exit 2
+      fi
